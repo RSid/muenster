@@ -1,5 +1,9 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
+    @jobs = Job.all.order(updated_at: :desc)
+  end
+
+  def show
+    @job = Job.find(params[:id])
   end
 end
