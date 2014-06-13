@@ -1,4 +1,4 @@
 Muenster::Application.routes.draw do
-  resources :jobs, except: :delete
+  resources :jobs
   resources :companies, except: :delete
 end

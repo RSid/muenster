@@ -3,3 +3,6 @@
 <p><%= @job.title %></p>
 <p><%= @job.description %></p>
 <%= link_to(@job.company.name,company_path(@job.company.id)) %>
+
+
+<%= link_to("Delete", job_path(@job), method: :delete) %>
