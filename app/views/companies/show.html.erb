@@ -1,1 +1,9 @@
 <p><%= @company.name %></p>
+
+<li><%=@company.description%></li>
+
+<% @company.jobs.each do |job| %>
+  <li><%= job.title %> </li>
+<% end %>
+
+
