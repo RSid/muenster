@@ -1,6 +1,12 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all.order(updated_at: :desc)
+
+    if params[:search]
+      @jobs = Job.search(params[:search])
+    else
+      @jobs = Job.all.order(updated_at: :desc)
+    end
+
   end
 
   def show
